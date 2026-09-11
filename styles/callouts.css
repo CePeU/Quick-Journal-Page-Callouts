@@ -1,0 +1,34 @@
+.qjpc-callout-settings table { width: 100%; table-layout: fixed; }
+.qjpc-callout-settings td { vertical-align: top; }
+.qjpc-callout-settings th:nth-last-child(3) { width: 50px; }
+.qjpc-callout-settings th:nth-last-child(2) { width: 220px; }
+.qjpc-callout-settings th:last-child { width: 40px; }
+.qjpc-callout-settings input[type="text"] { width: 100%; min-width: 0; }
+.qjpc-callout-settings textarea { width: 100%; }
+
+.qjpc-callout-settings .qjpc-toggle-controls {
+  display: grid;
+  gap: 6px;
+  min-width: 180px;
+  padding: 8px;
+}
+
+.qjpc-toggle-controls label {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.qjpc-toggle-controls input[type="number"] { width: 65px; }
+.qjpc-toggle-controls input[type="color"] { width: 40px; }
+.qjpc-toggle-preview { margin: 4px 0; padding-inline-start: 24px; }
+.qjpc-toggle-preview > summary { display: list-item; cursor: pointer; }
+.qjpc-callout-settings .qjpc-toggle-controls .qjpc-toggle-preview > summary::marker {
+  /* Keep generic disclosure-arrow rules from replacing the configured glyph. */
+  content: var(--qjpc-content, normal) !important;
+  font-family: var(--qjpc-font-family, inherit);
+  font-weight: var(--qjpc-font-weight, inherit);
+  font-style: var(--qjpc-font-style, normal);
+  font-size: var(--qjpc-font-size, 1em);
+  color: var(--qjpc-color, inherit);
+}
