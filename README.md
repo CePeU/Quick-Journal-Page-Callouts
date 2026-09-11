@@ -22,21 +22,3 @@ Open **Configure Callouts** in the module settings. Each callout type has a **To
 Click **Save** to apply the appearance to existing and new callouts, in both the editor and the journal's reading view. These are shared world settings. The icon also continues to appear in the Callouts menu. Unknown icon names fall back to the standard arrow.
 
 Toggle styling uses CSS and Foundry's Font Awesome fonts. It does not add icon text or extra elements to the saved journal content.
-
-## Development checks
-
-The regression tests use the schema and ProseMirror dependencies from a local Foundry installation. They do not launch a world or change its documents.
-
-```powershell
-$env:FOUNDRY_APP_PATH = 'D:\path-to-foundry\resources\app'
-npm.cmd test
-```
-
-Browser interaction checks additionally require the development dependencies and an installed Chromium browser. Edge is the default; set `BROWSER_PATH` to another Chromium executable if needed.
-
-```powershell
-npm.cmd ci
-npm.cmd run test:browser
-```
-
-The browser fixture uses Foundry's actual disclosure NodeView where available. It checks typing, mouse and arrow-key navigation, renaming, repeated toggles, undo, and HTML save/reload. The module itself requires no npm installation or build step.
