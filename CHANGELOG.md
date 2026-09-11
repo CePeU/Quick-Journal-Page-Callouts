@@ -6,6 +6,8 @@
 ### Removed
 ### Deprecated
 ### Security
+### To do
+Translations
 
 ### Comments
 This adds finally foldable callouts to the prose mirror editor of Foundry.

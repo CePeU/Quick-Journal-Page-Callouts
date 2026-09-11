@@ -1,3 +1,5 @@
+![GitHub Downloads (specific asset, latest release)](https://img.shields.io/github/downloads/CePeU/Quick-Journal-Page-Callouts/latest/quick-journal-page-sort.zip)
+
 # Quick Journal Page Callouts
 
 A module that adds callouts which are based on the details tag to Foundry VTT v14.
