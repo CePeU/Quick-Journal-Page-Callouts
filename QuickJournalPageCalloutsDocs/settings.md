@@ -7,24 +7,24 @@ You can add new callout types by clicking the **+ Add** button.
 New callouts have several fields to be filled:
 ![[Screenshots\Settings_02.png]]
 
-**Type:** This defines the note and should be a unique name and not repeated
-**Label:** This is the name which is used in the Foundry Prose Mirror menu
-**Summary:** This is what the callout will show as the callout name
-**Class:** This is the html class of the callout which is used to style it 
-**Icon:** This is the icon which is used in the menu. You can use a Font Awesom icon name
-**Open:** This will set the default how this callout will start off. Either closed or opened.
+**Type:** This defines the note and should be a unique name and not repeated   
+**Label:** This is the name which is used in the Foundry Prose Mirror menu   
+**Summary:** This is what the callout will show as the callout name   
+**Class:** This is the html class of the callout which is used to style it    
+**Icon:** This is the icon which is used in the menu. You can use a Font Awesom icon name   
+**Open:** This will set the default how this callout will start off. Either closed or opened.    
 
 
 ## Toggle appearance of callout
 
 Each callout type has a **Toggle** column with:
 
-**Style:** Use the existing **Icon** field for the toggle, or choose **Standard arrow**.
-**Size:** 50–200% of the title's font size; the default is 100%.
-**Color:** inherit the title's color. You need to uncheck **Use text color** to be able to choose a color for the icon in the color picker.
+**Style:** Use the existing **Icon** field for the toggle, or choose **Standard arrow**.    
+**Size:** 50–200% of the title's font size; the default is 100%.    
+**Color:** inherit the title's color. You need to uncheck **Use text color** to be able to choose a color for the icon in the color picker.    
 
 
-Below you find a clickable preview that updates while you edit the fields.
+Below you find a clickable preview that updates while you edit the fields.   
 
 Click **Save** to apply the appearance to existing and new callouts, in both the editor and the journal's reading view. These are shared world settings. The icon also continues to appear in the Callouts menu. Unknown icon names fall back to the standard arrow.
 
