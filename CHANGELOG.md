@@ -1,3 +1,14 @@
+## [1.0.2] / 2026-09-14
+### Added
+### Fixed
+- Setting the cursor at the very start of the callout and pressing Enter will now add a paragraph before the callout. That way it cannot get "stuck" in the first line of the text.
+### Changed
+### Removed
+### Deprecated
+### Security
+### To do
+Translations
+
 ## [1.0.1] / 2026-09-11
 ### Added
 - css Obsidian style for 4 of 8 callout types (details, note, warning,tip)
