@@ -212,8 +212,8 @@ function createCalloutPlugin() {
 }
 
 // Handle the Enter key while the caret is inside a callout.
-// This is the logic that decides whether Enter should move into the body, close the callout,
-// or split the content without breaking the wrapper.
+// This decides whether Enter adds space before the callout, moves into the body,
+// exits the callout, or splits the content without breaking the wrapper.
 function handleCalloutEnter(view, event) {
   if (event.key !== "Enter" || event.shiftKey || event.ctrlKey || event.metaKey || event.altKey
     || event.isComposing || view.composing) return false;
@@ -226,9 +226,13 @@ function handleCalloutEnter(view, event) {
   const summaryDepth = findAncestorDepth($from, isSummary);
   let handled = false;
 
-  // If the caret is in the summary title area, pressing Enter moves into the body.
+  // At the very start of the title, add space before the whole callout.
+  // Account for summary_block titles whose first textblock is nested inside them.
   if (summaryDepth > detailsDepth && $to.pos < $from.after(summaryDepth)) {
-    handled = moveToBody(view, $from, detailsDepth);
+    const atStart = empty && $from.parent.isTextblock && $from.index(detailsDepth) === 0
+      && $from.pos === $from.start(summaryDepth) + $from.depth - summaryDepth;
+    handled = atStart ? insertParagraphBeforeCallout(view, $from, detailsDepth)
+      : moveToBody(view, $from, detailsDepth);
   }
   // If the cursor is in the body, let the user split or exit the callout naturally.
   else if ($from.depth === detailsDepth + 1 && $from.parent.isTextblock && !isSummary($from.parent)) {
@@ -245,6 +249,16 @@ function handleCalloutEnter(view, event) {
 
   if (handled) event.preventDefault();
   return handled;
+}
+
+// The transaction maps the caret along with the callout, keeping it at the title's start.
+function insertParagraphBeforeCallout(view, $from, detailsDepth) {
+  const paragraph = view.state.schema.nodes.paragraph?.createAndFill();
+  const before = $from.before(detailsDepth);
+  if (!paragraph || !canInsertNodeAt(view.state.doc.resolve(before), paragraph.type)) return false;
+
+  view.dispatch(view.state.tr.insert(before, paragraph).scrollIntoView());
+  return true;
 }
 
 // Move the caret from the summary title into the callout body.
