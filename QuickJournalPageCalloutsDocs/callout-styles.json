@@ -1,0 +1,145 @@
+[
+    {
+        "id": "note",
+        "label": "Note",
+        "summary": "Note",
+        "icon": "fa-solid fa-circle-info",
+        "className": "md-callout-note",
+        "open": true,
+        "toggleStyle": "icon",
+        "toggleSize": 100,
+        "toggleColor": ""
+    },
+    {
+        "id": "abstract",
+        "label": "Abstract",
+        "summary": "Abstract",
+        "icon": "fa-solid fa-bars-staggered",
+        "className": "md-callout-abstract",
+        "open": true,
+        "toggleStyle": "icon",
+        "toggleSize": 100,
+        "toggleColor": ""
+    },
+    {
+        "id": "info",
+        "label": "Info",
+        "summary": "Info",
+        "icon": "fa-solid fa-circle-info",
+        "className": "md-callout-info",
+        "open": true,
+        "toggleStyle": "icon",
+        "toggleSize": 100,
+        "toggleColor": ""
+    },
+    {
+        "id": "todo",
+        "label": "Todo",
+        "summary": "Todo",
+        "icon": "fa-solid fa-list-check",
+        "className": "md-callout-todo",
+        "open": true,
+        "toggleStyle": "icon",
+        "toggleSize": 100,
+        "toggleColor": ""
+    },
+    {
+        "id": "tip",
+        "label": "Tip",
+        "summary": "Tip",
+        "icon": "fa-solid fa-lightbulb",
+        "className": "md-callout-tip",
+        "open": true,
+        "toggleStyle": "icon",
+        "toggleSize": 100,
+        "toggleColor": ""
+    },
+    {
+        "id": "success",
+        "label": "Success",
+        "summary": "Success",
+        "icon": "fa-solid fa-circle-check",
+        "className": "md-callout-success",
+        "open": true,
+        "toggleStyle": "icon",
+        "toggleSize": 100,
+        "toggleColor": ""
+    },
+    {
+        "id": "question",
+        "label": "Question",
+        "summary": "Question",
+        "icon": "fa-solid fa-circle-question",
+        "className": "md-callout-question",
+        "open": true,
+        "toggleStyle": "icon",
+        "toggleSize": 100,
+        "toggleColor": ""
+    },
+    {
+        "id": "warning",
+        "label": "Warning",
+        "summary": "Warning",
+        "icon": "fa-solid fa-triangle-exclamation",
+        "className": "md-callout-warning",
+        "open": true,
+        "toggleStyle": "icon",
+        "toggleSize": 100,
+        "toggleColor": ""
+    },
+    {
+        "id": "failure",
+        "label": "Failure",
+        "summary": "Failure",
+        "icon": "fa-solid fa-circle-xmark",
+        "className": "md-callout-failure",
+        "open": true,
+        "toggleStyle": "icon",
+        "toggleSize": 100,
+        "toggleColor": ""
+    },
+    {
+        "id": "danger",
+        "label": "Danger",
+        "summary": "Danger",
+        "icon": "fa-solid fa-skull-crossbones",
+        "className": "md-callout-danger",
+        "open": true,
+        "toggleStyle": "icon",
+        "toggleSize": 100,
+        "toggleColor": ""
+    },
+    {
+        "id": "bug",
+        "label": "Bug",
+        "summary": "Bug",
+        "icon": "fa-solid fa-bug",
+        "className": "md-callout-bug",
+        "open": true,
+        "toggleStyle": "icon",
+        "toggleSize": 100,
+        "toggleColor": ""
+    },
+    {
+        "id": "example",
+        "label": "Example",
+        "summary": "Example",
+        "icon": "fa-solid fa-flask",
+        "className": "md-callout-example",
+        "open": true,
+        "toggleStyle": "icon",
+        "toggleSize": 100,
+        "toggleColor": ""
+    },
+    {
+        "id": "quote",
+        "label": "Quote",
+        "summary": "Quote",
+        "icon": "fa-solid fa-quote-left",
+        "className": "md-callout-quote",
+        "open": true,
+        "toggleStyle": "icon",
+        "toggleSize": 100,
+        "toggleColor": ""
+    }
+]
