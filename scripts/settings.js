@@ -305,12 +305,12 @@ function renderConfigForm(data) {
         <thead>
           <tr>
             <th>${game.i18n.localize("QJPCA.table.type")}</th>
-            <th>${game.i18n.localize("QJPCA.table.label")}Label</th>
-            <th>${game.i18n.localize("QJCA.table.summary")}Summary</th>
-            <th>${game.i18n.localize("QJCA.table.class")}Class</th>
-            <th>${game.i18n.localize("QJCA.table.icon")}Icon</th>
-            <th>${game.i18n.localize("QJCA.table.open")}Open</th>
-            <th>${game.i18n.localize("QJCA.table.toggle")}Toggle</th>
+            <th>${game.i18n.localize("QJPCA.table.label")}</th>
+            <th>${game.i18n.localize("QJCA.table.summary")}</th>
+            <th>${game.i18n.localize("QJCA.table.class")}</th>
+            <th>${game.i18n.localize("QJCA.table.icon")}</th>
+            <th>${game.i18n.localize("QJCA.table.open")}</th>
+            <th>${game.i18n.localize("QJCA.table.toggle")}</th>
             <th></th>
           </tr>
         </thead>
@@ -326,13 +326,13 @@ function renderConfigForm(data) {
 
       <footer class="form-footer">
         <button type="button" data-qjpc-action="add">
-          <i class="fas fa-plus"></i> Add
+          <i class="fas fa-plus"></i> ${game.i18n.localize("QJCA.button.add")}
         </button>
         <button type="button" data-qjpc-action="reset">
-          <i class="fas fa-undo"></i> Defaults
+          <i class="fas fa-undo"></i> ${game.i18n.localize("QJCA.button.defaults")}
         </button>
         <button type="button" data-qjpc-action="save">
-          <i class="fas fa-save"></i> Save
+          <i class="fas fa-save"></i> ${game.i18n.localize("QJCA.button.save")}
         </button>
       </footer>
     </form>
@@ -354,14 +354,14 @@ function renderTypeRow(type) {
       <td><input type="checkbox" name="open"${checked}></td>
       <td>
         <div class="qjpc-toggle-controls">
-          <label>Style
+          <label>${game.i18n.localize("QJCA.text.callout.label.style")}
             <select name="toggleStyle">
-              <option value="icon"${type.toggleStyle !== "arrow" ? " selected" : ""}>Configured icon</option>
-              <option value="arrow"${type.toggleStyle === "arrow" ? " selected" : ""}>Standard arrow</option>
+              <option value="icon"${type.toggleStyle !== "arrow" ? " selected" : ""}>${game.i18n.localize("QJCA.text.callout.label.configuredicon")}</option>
+              <option value="arrow"${type.toggleStyle === "arrow" ? " selected" : ""}>${game.i18n.localize("QJCA.text.callout.label.standardarrow")}Standard arrow</option>
             </select>
           </label>
-          <label>Size <input type="number" name="toggleSize" min="50" max="200" step="10" value="${type.toggleSize ?? 100}"> %</label>
-          <label>Color <input type="color" name="toggleColor" value="${escapeAttribute(type.toggleColor || "#808080")}"${type.toggleColor ? "" : " disabled"}></label>
+          <label>${game.i18n.localize("QJCA.text.callout.label.size")} <input type="number" name="toggleSize" min="50" max="200" step="10" value="${type.toggleSize ?? 100}"> %</label>
+          <label>${game.i18n.localize("QJCA.text.callout.label.color")} <input type="color" name="toggleColor" value="${escapeAttribute(type.toggleColor || "#808080")}"${type.toggleColor ? "" : " disabled"}></label>
           <label><input type="checkbox" name="toggleInheritColor"${type.toggleColor ? "" : " checked"}> ${game.i18n.localize("QJCA.text.callout.color")}</label>
           <details class="qjpc-toggle-preview"><summary>${escapeHTML(type.summary || type.label)}</summary><p>${game.i18n.localize("QJCA.text.callout.text")}</p></details>
         </div>

@@ -20,6 +20,14 @@
 	"QJCA.textarea.label":"Generated Array",
 	"QJCA.text.callout.color": "Use text color",
 	"QJCA.text.callout.text": "Callout text",
+	"QJCA.text.callout.label.size": "Size",
+	"QJCA.text.callout.label.color": "Color",
+	"QJCA.text.callout.label.standardarrow": "Standard arrow",
+	"QJCA.text.callout.label.configuredicon": "Configured icon",
+	"QJCA.text.callout.label.style": "Style",
 	"QJCA.newtpye.label":"Custom",
-	"QJCA.newtpye.summary":"Custom" 
+	"QJCA.newtpye.summary":"Custom",
+	"QJCA.button.add":"Add",
+	"QJCA.button.defaults":"Defaults",
+	"QJCA.button.save": "Save"
 }

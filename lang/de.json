@@ -14,11 +14,19 @@
 	"QJCA.table.class":"Klasse", 
 	"QJCA.table.icon":"Icon", 
 	"QJCA.table.open":"Offen", 
-	"QJCA.table.toggle":"Umschalten", 
+	"QJCA.table.toggle":"Klappsymbol", 
 	"QJCA.table.description":"Das Icon Feld erzeugt sowohl das Menü Icon als auch das benutzerdefinierten Klappsymbol. Die klappsymbol Stile werden auch auf existierende Callouts angewandt.",
 	"QJCA.textarea.label":"Erzeuge ein Array",
 	"QJCA.text.callout.color": "Nutze die Textfarbe",
 	"QJCA.text.callout.text": "Callout Text",
+	"QJCA.text.callout.label.size": "Größe",
+	"QJCA.text.callout.label.color": "Farbe",
+	"QJCA.text.callout.label.standardarrow": "Standard Pfeil",
+	"QJCA.text.callout.label.configuredicon": "Gewähltes Icon",
+	"QJCA.text.callout.label.style": "Stil",
 	"QJCA.newtpye.label":"Benutzerdefiniert",
-	"QJCA.newtpye.summary":"Benutzerdefiniert" 
+	"QJCA.newtpye.summary":"Benutzerdefiniert",
+	"QJCA.button.add":"Hinzufügen",
+	"QJCA.button.defaults":"Standardwerte",
+	"QJCA.button.save": "Speichern"
 }
