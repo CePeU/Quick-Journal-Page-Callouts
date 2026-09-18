@@ -306,7 +306,7 @@ function renderConfigForm(data) {
           <tr>
             <th>${game.i18n.localize("QJPCA.table.type")}</th>
             <th>${game.i18n.localize("QJPCA.table.label")}</th>
-            <th>${game.i18n.localize("QJPCAtable.summary")}</th>
+            <th>${game.i18n.localize("QJPCA.table.summary")}</th>
             <th>${game.i18n.localize("QJPCA.table.class")}</th>
             <th>${game.i18n.localize("QJPCA.table.icon")}</th>
             <th>${game.i18n.localize("QJPCA.table.open")}</th>
@@ -357,7 +357,7 @@ function renderTypeRow(type) {
           <label>${game.i18n.localize("QJPCA.text.callout.label.style")}
             <select name="toggleStyle">
               <option value="icon"${type.toggleStyle !== "arrow" ? " selected" : ""}>${game.i18n.localize("QJPCA.text.callout.label.configuredicon")}</option>
-              <option value="arrow"${type.toggleStyle === "arrow" ? " selected" : ""}>${game.i18n.localize("QJPCA.text.callout.label.standardarrow")}Standard arrow</option>
+              <option value="arrow"${type.toggleStyle === "arrow" ? " selected" : ""}>${game.i18n.localize("QJPCA.text.callout.label.standardarrow")}</option>
             </select>
           </label>
           <label>${game.i18n.localize("QJPCA.text.callout.label.size")} <input type="number" name="toggleSize" min="50" max="200" step="10" value="${type.toggleSize ?? 100}"> %</label>
