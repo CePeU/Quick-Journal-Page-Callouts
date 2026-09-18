@@ -2,7 +2,7 @@
   "id": "quick-journal-page-callouts",
   "title": "Quick-Journal-Page-Callouts",
   "description": "Adds an option to add callouts with now supported details tags.",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "library": false,
   "compatibility": {
     "minimum": "13",
