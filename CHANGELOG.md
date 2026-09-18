@@ -4,6 +4,8 @@
 - First translation strings in the code and de.json und en.json
 ### Fixed
 ### Changed
+- module json now points to release number
+- counting badge now points to release number
 ### Removed
 ### Deprecated
 ### Security
