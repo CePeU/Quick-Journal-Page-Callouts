@@ -1,4 +1,15 @@
-## [1.0.3] / 2026-09-14
+## [1.0.3] / 2026-09-18
+### Added
+### Fixed
+- fixed missing translation strings
+- fixed dates in Changelog.md
+### Changed
+### Removed
+### Deprecated
+### Security
+### To do
+
+## [1.0.3] / 2026-09-18
 ### Added
 - More standard callouts to the default settings
 - First translation strings in the code and de.json und en.json
