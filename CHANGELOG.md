@@ -1,3 +1,14 @@
+## [1.0.3] / 2026-09-14
+### Added
+- More standard callouts to the default settings
+- First translation strings in the code and de.json und en.json
+### Fixed
+### Changed
+### Removed
+### Deprecated
+### Security
+### To do
+
 ## [1.0.2] / 2026-09-14
 ### Added
 ### Fixed

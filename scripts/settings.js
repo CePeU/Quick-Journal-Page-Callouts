@@ -12,36 +12,147 @@ const SETTING_CALLOUT_TYPES_MENU = "calloutTypesMenu";
 // Each object describes one block style, such as Note, Tip, Warning, or Quote.
 export const DEFAULT_CALLOUT_TYPES = [
   {
-    id: "note",
-    label: "Note",
-    summary: "Note",
-    icon: "fa-solid fa-circle-info",
-    className: "md-callout-note",
-    open: true
+    "id": "note",
+    "label": "Note",
+    "summary": "Note",
+    "icon": "fa-solid fa-circle-info",
+    "className": "md-callout-note",
+    "open": true,
+    "toggleStyle": "icon",
+    "toggleSize": 100,
+    "toggleColor": ""
   },
   {
-    id: "tip",
-    label: "Tip",
-    summary: "Tip",
-    icon: "fa-solid fa-lightbulb",
-    className: "md-callout-tip",
-    open: true
+    "id": "abstract",
+    "label": "Abstract",
+    "summary": "Abstract",
+    "icon": "fa-solid fa-bars-staggered",
+    "className": "md-callout-abstract",
+    "open": true,
+    "toggleStyle": "icon",
+    "toggleSize": 100,
+    "toggleColor": ""
   },
   {
-    id: "warning",
-    label: "Warning",
-    summary: "Warning",
-    icon: "fa-solid fa-triangle-exclamation",
-    className: "md-callout-warning",
-    open: true
+    "id": "info",
+    "label": "Info",
+    "summary": "Info",
+    "icon": "fa-solid fa-circle-info",
+    "className": "md-callout-info",
+    "open": true,
+    "toggleStyle": "icon",
+    "toggleSize": 100,
+    "toggleColor": ""
   },
   {
-    id: "quote",
-    label: "Quote",
-    summary: "Quote",
-    icon: "fa-solid fa-quote-left",
-    className: "md-callout-quote",
-    open: true
+    "id": "todo",
+    "label": "Todo",
+    "summary": "Todo",
+    "icon": "fa-solid fa-list-check",
+    "className": "md-callout-todo",
+    "open": true,
+    "toggleStyle": "icon",
+    "toggleSize": 100,
+    "toggleColor": ""
+  },
+  {
+    "id": "tip",
+    "label": "Tip",
+    "summary": "Tip",
+    "icon": "fa-solid fa-lightbulb",
+    "className": "md-callout-tip",
+    "open": true,
+    "toggleStyle": "icon",
+    "toggleSize": 100,
+    "toggleColor": ""
+  },
+  {
+    "id": "success",
+    "label": "Success",
+    "summary": "Success",
+    "icon": "fa-solid fa-circle-check",
+    "className": "md-callout-success",
+    "open": true,
+    "toggleStyle": "icon",
+    "toggleSize": 100,
+    "toggleColor": ""
+  },
+  {
+    "id": "question",
+    "label": "Question",
+    "summary": "Question",
+    "icon": "fa-solid fa-circle-question",
+    "className": "md-callout-question",
+    "open": true,
+    "toggleStyle": "icon",
+    "toggleSize": 100,
+    "toggleColor": ""
+  },
+  {
+    "id": "warning",
+    "label": "Warning",
+    "summary": "Warning",
+    "icon": "fa-solid fa-triangle-exclamation",
+    "className": "md-callout-warning",
+    "open": true,
+    "toggleStyle": "icon",
+    "toggleSize": 100,
+    "toggleColor": ""
+  },
+  {
+    "id": "failure",
+    "label": "Failure",
+    "summary": "Failure",
+    "icon": "fa-solid fa-circle-xmark",
+    "className": "md-callout-failure",
+    "open": true,
+    "toggleStyle": "icon",
+    "toggleSize": 100,
+    "toggleColor": ""
+  },
+  {
+    "id": "danger",
+    "label": "Danger",
+    "summary": "Danger",
+    "icon": "fa-solid fa-skull-crossbones",
+    "className": "md-callout-danger",
+    "open": true,
+    "toggleStyle": "icon",
+    "toggleSize": 100,
+    "toggleColor": ""
+  },
+  {
+    "id": "bug",
+    "label": "Bug",
+    "summary": "Bug",
+    "icon": "fa-solid fa-bug",
+    "className": "md-callout-bug",
+    "open": true,
+    "toggleStyle": "icon",
+    "toggleSize": 100,
+    "toggleColor": ""
+  },
+  {
+    "id": "example",
+    "label": "Example",
+    "summary": "Example",
+    "icon": "fa-solid fa-flask",
+    "className": "md-callout-example",
+    "open": true,
+    "toggleStyle": "icon",
+    "toggleSize": 100,
+    "toggleColor": ""
+  },
+  {
+    "id": "quote",
+    "label": "Quote",
+    "summary": "Quote",
+    "icon": "fa-solid fa-quote-left",
+    "className": "md-callout-quote",
+    "open": true,
+    "toggleStyle": "icon",
+    "toggleSize": 100,
+    "toggleColor": ""
   }
 ];
 
@@ -49,8 +160,8 @@ export const DEFAULT_CALLOUT_TYPES = [
 export function registerSettings() {
   // This stores the actual array of callout type objects.
   game.settings.register(MODULE_ID, SETTING_CALLOUT_TYPES, {
-    name: "Callout Types",
-    hint: "Array of callout types used by the ProseMirror callout menu.",
+    name: "QJPCA.settings.calloutTypes.name",
+    hint: "QJPCA.settings.calloutTypes.hint",
     scope: "world",
     config: false,
     type: Array,
@@ -60,9 +171,9 @@ export function registerSettings() {
 
   // This creates a button/menu entry in the Foundry settings UI.
   game.settings.registerMenu(MODULE_ID, SETTING_CALLOUT_TYPES_MENU, {
-    name: "Callout Types",
-    label: "Configure Callouts",
-    hint: "Create the callout types shown in the ProseMirror menu.",
+    name: "QJPCA.settings.calloutTypesMenu.name",
+    label: "QJPCA.settings.calloutTypesMenu.label",
+    hint: "QJPCA.settings.calloutTypesMenu.hint",
     icon: "fas fa-list",
     type: CalloutTypesConfig,
     restricted: true
@@ -91,7 +202,7 @@ export class CalloutTypesConfig extends FormApplication {
     // Merge Foundry's default form settings with our custom ones.
     return foundry.utils.mergeObject(super.defaultOptions, {
       id: `${MODULE_ID}-callout-types`,
-      title: "Callout Types",
+      title: "QJPCA.settings.calloutTypes.name",
       width: 1060,
       closeOnSubmit: false,
       submitOnChange: false,
@@ -164,17 +275,17 @@ export class CalloutTypesConfig extends FormApplication {
     const types = normalizeCalloutTypes(readRows(root));
 
     if (!types.length) {
-      ui.notifications.warn("Add at least one callout type.");
+      ui.notifications.warn(game.i18n.localize("QJPCA.ui.notification.warnOne"));
       return;
     }
 
     try {
       await game.settings.set(MODULE_ID, SETTING_CALLOUT_TYPES, types);
-      ui.notifications.info("Callout types saved.");
+      ui.notifications.info(game.i18n.localize("QJPCA.ui.notifications.info.One"));
       await this.close();
     } catch (error) {
       console.warn(`${MODULE_ID} | Failed to save callout types`, error);
-      ui.notifications.error("Callout types could not be saved. Check the console for details.");
+      ui.notifications.error(game.i18n.localize("QJPCA.ui.notifications.error.One"));
     }
   }
 
@@ -189,17 +300,17 @@ export class CalloutTypesConfig extends FormApplication {
 function renderConfigForm(data) {
   return `
     <form class="qjpc-callout-settings" autocomplete="off">
-      <p>The Icon field supplies both the menu icon and the custom toggle. Toggle styles apply to existing callouts too.</p>
+      <p>${game.i18n.localize("QJPCA.table.description")}</p>
       <table>
         <thead>
           <tr>
-            <th>Type</th>
-            <th>Label</th>
-            <th>Summary</th>
-            <th>Class</th>
-            <th>Icon</th>
-            <th>Open</th>
-            <th>Toggle</th>
+            <th>${game.i18n.localize("QJPCA.table.type")}</th>
+            <th>${game.i18n.localize("QJPCA.table.label")}Label</th>
+            <th>${game.i18n.localize("QJCA.table.summary")}Summary</th>
+            <th>${game.i18n.localize("QJCA.table.class")}Class</th>
+            <th>${game.i18n.localize("QJCA.table.icon")}Icon</th>
+            <th>${game.i18n.localize("QJCA.table.open")}Open</th>
+            <th>${game.i18n.localize("QJCA.table.toggle")}Toggle</th>
             <th></th>
           </tr>
         </thead>
@@ -209,7 +320,7 @@ function renderConfigForm(data) {
       </table>
 
       <div class="form-group stacked">
-        <label>Generated Array</label>
+        <label>${game.i18n.localize("QJCA.textarea.label")}</label>
         <textarea data-callout-json rows="10" readonly>${escapeHTML(data.json)}</textarea>
       </div>
 
@@ -251,8 +362,8 @@ function renderTypeRow(type) {
           </label>
           <label>Size <input type="number" name="toggleSize" min="50" max="200" step="10" value="${type.toggleSize ?? 100}"> %</label>
           <label>Color <input type="color" name="toggleColor" value="${escapeAttribute(type.toggleColor || "#808080")}"${type.toggleColor ? "" : " disabled"}></label>
-          <label><input type="checkbox" name="toggleInheritColor"${type.toggleColor ? "" : " checked"}> Use text color</label>
-          <details class="qjpc-toggle-preview"><summary>${escapeHTML(type.summary || type.label)}</summary><p>Callout text</p></details>
+          <label><input type="checkbox" name="toggleInheritColor"${type.toggleColor ? "" : " checked"}> ${game.i18n.localize("QJCA.text.callout.color")}</label>
+          <details class="qjpc-toggle-preview"><summary>${escapeHTML(type.summary || type.label)}</summary><p>${game.i18n.localize("QJCA.text.callout.text")}</p></details>
         </div>
       </td>
       <td>
@@ -271,8 +382,8 @@ function createNewType(form) {
 
   return {
     id,
-    label: `Custom ${count}`,
-    summary: `Custom ${count}`,
+    label: `${game.i18n.localize("QJCA.newtpye.label")} ${count}`,
+    summary: `${game.i18n.localize("QJCA.newtpye.summary")} ${count}`,
     icon: "fa-solid fa-square-caret-down",
     className: `md-callout-${id}`,
     open: true

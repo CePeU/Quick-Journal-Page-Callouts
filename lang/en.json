@@ -1,3 +1,25 @@
 {
-	"QJPCA.test":"Test"
+	"QJPCA.test":"Test",
+	"QJPCA.settings.calloutTypes.name":"Callout Types",
+	"QJPCA.settings.calloutTypes.hint":"Array of callout types used by the ProseMirror callout menu.",
+	"QJPCA.settings.calloutTypesMenu.name":"Callout Types",
+	"QJPCA.settings.calloutTypesMenu.label":"Configure Callouts",
+	"QJPCA.settings.calloutTypesMenu.hint":"Create the callout types shown in the ProseMirror menu.",
+	"QJPCA.ui.notification.warn.One":"Add at least one callout type.",
+	"QJPCA.ui.notifications.info.One":"Callout types saved.",
+	"QJPCA.ui.notifications.error.One":"Callout types could not be saved. Check the console for details",
+	"QJPCA.ui.notifications.error.Two":"Cannot close selected ",
+	"QJPCA.table.type":"Type", 
+	"QJPCA.table.label":"Label", 
+	"QJCA.table.summary":"Summary", 
+	"QJCA.table.class":"Class", 
+	"QJCA.table.icon":"Icon", 
+	"QJCA.table.open":"Open", 
+	"QJCA.table.toggle":"Toggle",
+	"QJCA.table.description":"The Icon field supplies both the menu icon and the custom toggle. Toggle styles apply to existing callouts too.",
+	"QJCA.textarea.label":"Generated Array",
+	"QJCA.text.callout.color": "Use text color",
+	"QJCA.text.callout.text": "Callout text",
+	"QJCA.newtpye.label":"Custom",
+	"QJCA.newtpye.summary":"Custom" 
 }

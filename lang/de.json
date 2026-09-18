@@ -1,3 +1,24 @@
 {
-	"QJPCA.test":"Test"
+	"QJPCA.settings.calloutTypes.name":"Callout Typen",
+	"QJPCA.settings.calloutTypes.hint":"Array der von ProseMirror genutzten Callout Typen.",
+	"QJPCA.settings.calloutTypesMenu.name":"Callout Typen",
+	"QJPCA.settings.calloutTypesMenu.label":"Konfiguriere Callouts",
+	"QJPCA.settings.calloutTypesMenu.hint":"Erzeuge die Callout Typen für das ProseMirror Menü.",
+	"QJPCA.ui.notification.warn.One":"Füge mindestens einen Callout Typ hinzu.",
+	"QJPCA.ui.notifications.info.One":"Callout Typen wurden gespeichert.",
+	"QJPCA.ui.notifications.error.One":"Callout Typen konnten nicht gespeichert werden. Prüfe die Entwickler Konsole für Details",
+	"QJPCA.ui.notifications.error.Two":"Cannot close selected ",
+	"QJPCA.table.type":"Typ", 
+	"QJPCA.table.label":"Label", 
+	"QJCA.table.summary":"Zusammenfassung", 
+	"QJCA.table.class":"Klasse", 
+	"QJCA.table.icon":"Icon", 
+	"QJCA.table.open":"Offen", 
+	"QJCA.table.toggle":"Umschalten", 
+	"QJCA.table.description":"Das Icon Feld erzeugt sowohl das Menü Icon als auch das benutzerdefinierten Klappsymbol. Die klappsymbol Stile werden auch auf existierende Callouts angewandt.",
+	"QJCA.textarea.label":"Erzeuge ein Array",
+	"QJCA.text.callout.color": "Nutze die Textfarbe",
+	"QJCA.text.callout.text": "Callout Text",
+	"QJCA.newtpye.label":"Benutzerdefiniert",
+	"QJCA.newtpye.summary":"Benutzerdefiniert" 
 }
