@@ -29,9 +29,15 @@ function addCalloutDropDown(menu, dropDowns) {
   // Map every configured callout type to a menu entry.
   const entries = getCalloutTypes().map(type => ({
     action: `${MODULE_ID}-insert-${type.id}`,
-    title: type.label,
-    icon: `<i class="${escapeAttribute(type.icon)}"></i>`,
-    node: detailsNode,
+    // Foundry's dropdown rows render title as HTML and ignore the entry's icon property.
+    title: `<i class="${escapeAttribute(type.icon)} fa-fw" aria-hidden="true"></i> ${escapeAttribute(type.label)}`,
+    // Insertion commands must not declare a node: Foundry uses it to mark
+    // entries as selected whenever the cursor is inside that node type.
+    //But in our case that is not necessary and it would apply to any callout type because
+    //all of them are of type details tag.
+    //node: detailsNode,
+
+
     // This command is executed when the user clicks a menu item.
     // It creates a new callout block in the editor.
     cmd: (state, dispatch, view) => {
@@ -50,14 +56,15 @@ function addCalloutDropDown(menu, dropDowns) {
     icon: '<i class="fa-regular fa-comment-dots"></i>',
     entries
   };
-}
 
-// Small helper to escape strings before placing them into HTML attributes.
-// Without this, values like quotes or angle brackets could break the generated HTML.
-function escapeAttribute(value) {
-  return String(value ?? "")
-    .replaceAll("&", "&amp;")
-    .replaceAll("<", "&lt;")
-    .replaceAll(">", "&gt;")
-    .replaceAll('"', "&quot;");
+
+  // Small helper to escape strings before placing them into HTML attributes.
+  // Without this, values like quotes or angle brackets could break the generated HTML.
+  function escapeAttribute(value) {
+    return String(value ?? "")
+      .replaceAll("&", "&amp;")
+      .replaceAll("<", "&lt;")
+      .replaceAll(">", "&gt;")
+      .replaceAll('"', "&quot;");
+  }
 }

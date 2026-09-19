@@ -1,3 +1,6 @@
 # Ignore directories
 TechDoku/
 QuickJournalPageCalloutsDocs/.obsidian
+
+# Batch files lie go.cmd
+*.cmd

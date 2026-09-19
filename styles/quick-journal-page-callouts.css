@@ -69,6 +69,26 @@
   color: var(--qjpc-color, inherit);
 }
 
+.quick-journal-callouts .qjpc-callout-menu-entry {
+  --qjpc-menu-icon-size: 1rem;
+}
+
+.quick-journal-callouts .qjpc-callout-menu-entry i {
+  margin-right: 0.5rem;
+  width: var(--qjpc-menu-icon-size);
+  text-align: center;
+}
+
+.quick-journal-callouts .qjpc-callout-menu-entry .fa-check,
+.quick-journal-callouts .qjpc-callout-menu-entry .fa-solid.fa-check,
+.quick-journal-callouts .qjpc-callout-menu-entry .fa-regular.fa-check,
+.quick-journal-callouts .qjpc-callout-menu-entry .icon.active,
+.quick-journal-callouts .qjpc-callout-menu-entry .active .fa-check,
+.quick-journal-callouts .menu-item .fa-check,
+.quick-journal-callouts .menu-item .icon.active {
+  display: none !important;
+}
+
 /* ── Obsidian callouts ─────────────────────────────────────────────────── */
 :root {
   --md-callout-note: #448aff;
