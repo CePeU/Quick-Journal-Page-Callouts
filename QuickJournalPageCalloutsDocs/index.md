@@ -14,6 +14,7 @@ You will find a new icon in your editor after installing the menu with pre defin
 
 
 In addition you can configure the available types, names, classes, icons, and the default open state in the module settings.
+If you are profficient with css you can define your own styling as you are able to define your own classes.
 
 ## [[Settings.md|Settings]] 
 
