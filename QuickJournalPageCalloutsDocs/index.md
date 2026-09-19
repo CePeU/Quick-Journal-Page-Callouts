@@ -6,7 +6,12 @@ title: Quick Journal Page Callouts Documentation
 
 ## What it does
 
-This Foundry module adds a callouts menu to Foundry VTT's ProseMirror editor which are based on the details tag which now renders correct with Foundry VTT v14.
+This Foundry module adds a callouts menu to Foundry VTT's ProseMirror editor which are based on the details tag which now render correct with Foundry VTT v14.
+
+You will find a new icon in your editor after installing the menu with pre defined callouts.
+![[Screenshots\Editor.jpg]]
+
+
 
 In addition you can configure the available types, names, classes, icons, and the default open state in the module settings.
 
