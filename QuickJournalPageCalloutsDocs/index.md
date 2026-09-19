@@ -15,6 +15,13 @@ You will find a new icon in your editor after installing the menu with pre defin
 
 In addition you can configure the available types, names, classes, icons, and the default open state in the module settings.
 
+## [[Settings.md|Settings]] 
+
+The settings menu has only one entry which let's you open an application window that lets you configure callouts.
+
+![[Screenshots\Settings_01.png]]
+
+
 ### The Github repository can be found here
 https://github.com/CePeU/Quick-Journal-Page-Callouts
 
@@ -30,11 +37,6 @@ https://github.com/CePeU/Quick-Journal-Page-Callouts
 
 - Click the disclosure icon or arrow before the title to open or close the callout. Clicking a body line or the blank space around it leaves the callout open for editing. In the journal's reading view, the normal summary click behavior applies.
 
+## Callout Examples
 
-## [[Settings.md|Settings]] 
-
-
-The settings menu has only one entry which let's you open an application window that lets you configure callouts.
-
-![[Screenshots\Settings_01.png]]
-
+![[Screenshots\CalloutExamples.jpg]]
