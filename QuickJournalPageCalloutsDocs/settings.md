@@ -1,3 +1,6 @@
+---
+title: Settings Documentation
+---
 # Settings
 
 ## Create new Callouts

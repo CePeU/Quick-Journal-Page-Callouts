@@ -10,8 +10,8 @@ This Foundry module adds a callouts menu to Foundry VTT's ProseMirror editor whi
 
 In addition you can configure the available types, names, classes, icons, and the default open state in the module settings.
 
-### Full documentation can be found here
-https://cepeu.github.io/Quick-Journal-Page-Callouts
+### The Github repository can be found here
+https://github.com/CePeU/Quick-Journal-Page-Callouts
 
 ## How to use
 
