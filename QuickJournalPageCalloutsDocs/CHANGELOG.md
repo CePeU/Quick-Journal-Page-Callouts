@@ -1,3 +1,14 @@
+## [1.0.5] / 2026-09-19
+### Added
+### Fixed
+- fixed menu now showing callout icons and are not checked if cursor is in callout
+- unified Changelog.md destination. It now resides in the QuickJournalPageCalloutDocs folder.
+### Changed
+### Removed
+### Deprecated
+### Security
+### To do
+
 ## [1.0.4] / 2026-09-18
 ### Added
 ### Fixed
