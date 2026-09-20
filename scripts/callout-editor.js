@@ -2,7 +2,7 @@ import { MODULE_ID, getCalloutClassList } from "./settings.js";
 
 // This file is responsible for the actual callout editing behavior.
 // It teaches the ProseMirror editor how to understand a custom details/summary block
-// and how to handle Enter, click, and selection behavior so it behaves like a callout.
+// and how to handle keyboard, click, and selection behavior so it behaves like a callout.
 
 // A small utility to get access to the ProseMirror implementation used by Foundry.
 const getProseMirror = () => globalThis.foundry?.prosemirror ?? globalThis.ProseMirror;
@@ -39,12 +39,12 @@ export function initializeCalloutEditor(uuid, plugins, options) {
     if (plugins.menu && Menu) plugins.menu = Menu.build(schema);
   }
 
-  // Build our custom plugin that intercepts Enter and click behavior.
+  // Build our custom plugin that intercepts keyboard and click behavior.
   const plugin = createCalloutPlugin();
   if (!plugin) return;
 
   // Foundry constructs the final state from this collection AFTER the hook.
-  // Mutate it in place, putting our handlers ahead of the default Enter commands.
+  // Mutate it in place, putting our handlers ahead of the default keyboard commands.
   if (Array.isArray(plugins)) plugins.unshift(plugin);
   else {
     const entries = Object.entries(plugins).filter(([key]) => key !== MODULE_ID);
@@ -185,7 +185,7 @@ function setOpen(tr, pos, open) {
   tr.setNodeMarkup(pos, null, attrs);
 }
 
-// Create the ProseMirror plugin that handles Enter and click events for callouts.
+// Create the ProseMirror plugin that handles keyboard and click events for callouts.
 function createCalloutPlugin() {
   const pm = getProseMirror();
   const Plugin = pm?.state?.Plugin ?? pm?.Plugin;
@@ -194,7 +194,9 @@ function createCalloutPlugin() {
   return new Plugin({
     // ProseMirror flushes pending DOM/caret changes before handleKeyDown.
     // A raw DOM keydown handler can act on the old position after a mouse click.
-    props: { handleKeyDown: handleCalloutEnter },
+    props: {
+      handleKeyDown: (view, event) => handleCalloutBackspace(view, event) || handleCalloutEnter(view, event)
+    },
     view(view) {
       // Capture is necessary: Foundry's details NodeView handles title clicks
       // before a bubbling editor event handler would see them.
@@ -209,6 +211,34 @@ function createCalloutPlugin() {
       };
     }
   });
+}
+
+// Backspace at the start of the title removes its entire callout, even when it
+// still has content. Letting the default command remove just the summary leaves
+// a details wrapper with the browser's fallback title and disclosure marker.
+function handleCalloutBackspace(view, event) {
+  if (event.key !== "Backspace" || event.shiftKey || event.ctrlKey || event.metaKey || event.altKey
+    || event.isComposing || view.composing) return false;
+
+  const { $from, empty } = view.state.selection;
+  if (!empty || !$from.parent.isTextblock) return false;
+
+  // Only remove the nearest details block, never an enclosing callout.
+  const detailsDepth = findAncestorDepth($from, node => node.type.name === "details");
+  if (detailsDepth < 0 || !isCallout($from.node(detailsDepth))) return false;
+
+  const summaryDepth = findAncestorDepth($from, isSummary);
+  if (summaryDepth !== detailsDepth + 1 || $from.index(detailsDepth) !== 0
+    || $from.pos !== $from.start(summaryDepth) + $from.depth - summaryDepth) return false;
+
+  const before = $from.before(detailsDepth);
+  const tr = view.state.tr.delete(before, $from.after(detailsDepth));
+  // Prefer the preceding text. ProseMirror fills a required empty parent (such
+  // as the document) so the caret still has a valid place after the deletion.
+  setSelectionNear(tr, tr.mapping.map(before, -1), -1);
+  view.dispatch(tr.scrollIntoView());
+  event.preventDefault();
+  return true;
 }
 
 // Handle the Enter key while the caret is inside a callout.

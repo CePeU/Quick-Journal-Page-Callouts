@@ -1,5 +1,5 @@
 ![GitHub Downloads (specific asset, latest release)](https://img.shields.io/github/downloads/CePeU/Quick-Journal-Page-Callouts/latest/quick-journal-page-callouts.zip)
-![GitHub Downloads (specific asset, latest release)](https://img.shields.io/github/downloads/CePeU/Quick-Journal-Page-Callouts/1.0.5/quick-journal-page-callouts.zip)
+![GitHub Downloads (specific asset, latest release)](https://img.shields.io/github/downloads/CePeU/Quick-Journal-Page-Callouts/1.0.6/quick-journal-page-callouts.zip)
 
 # Quick Journal Page Callouts
 
@@ -21,5 +21,7 @@ https://cepeu.github.io/Quick-Journal-Page-Callouts
 - Select text and choose a callout to wrap the selection in `<details>` with the configured name in `<summary>`. Formatting and unselected surrounding text are preserved. The cursor moves to the end of the wrapped text so you can press Enter and continue writing.
 
 - Click the title to edit it. Enter in the title opens the callout and moves to its first body paragraph.
+
+- Backspace at the very start of a callout title deletes the entire callout, including its contents, and moves the cursor outside of it. For nested callouts, only the inner callout is removed.
 
 - Click the disclosure icon or arrow before the title to open or close the callout. Clicking a body line or the blank space around it leaves the callout open for editing. In the journal's reading view, the normal summary click behavior applies.

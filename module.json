@@ -2,7 +2,7 @@
   "id": "quick-journal-page-callouts",
   "title": "Quick-Journal-Page-Callouts",
   "description": "Adds an option to add callouts with now supported details tags.",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "library": false,
   "compatibility": {
     "minimum": "13",
@@ -36,7 +36,7 @@
   ],
   "url": "https://github.com/CePeU/Quick-Journal-Page-Callouts",
   "manifest": "https://github.com/CePeU/Quick-Journal-Page-Callouts/releases/latest/download/module.json",
-  "download": "https://github.com/CePeU/Quick-Journal-Page-Callouts/releases/download/1.0.5/quick-journal-page-callouts.zip",
+  "download": "https://github.com/CePeU/Quick-Journal-Page-Callouts/releases/download/1.0.6/quick-journal-page-callouts.zip",
   "readme": "https://github.com/CePeU/Quick-Journal-Page-Callouts/blob/main/README.md",
   "bugs": "https://github.com/CePeU/Quick-Journal-Page-Callouts/issues",
   "changelog": "https://github.com/CePeU/Quick-Journal-Page-Callouts/blob/main/QuickJournalPageCalloutsDocs/CHANGELOG.md",
