@@ -1,4 +1,4 @@
-## [1.0.6] / 2026-09-19
+## [1.0.6] / 2026-09-20
 ### Added
 ### Fixed
 - Backspace at the very start of a callout title deletes the entire callout, including its contents, and moves the cursor outside of it. For nested callouts, only the inner callout is removed.
