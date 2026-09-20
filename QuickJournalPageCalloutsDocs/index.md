@@ -12,7 +12,6 @@ You will find a new icon in your editor after installing the menu with pre defin
 ![[Screenshots\Editor.jpg]]
 
 
-
 In addition you can configure the available types, names, classes, icons, and the default open state in the module settings.
 If you are profficient with css you can define your own styling as you are able to define your own classes.
 
@@ -41,3 +40,5 @@ https://github.com/CePeU/Quick-Journal-Page-Callouts
 ## Callout Examples
 
 ![[Screenshots\CalloutExamples.jpg]]
+
+The callouts are inspired by the Foundry VTT module [[https://github.com/martin-papy/markdown-paste|Markdown Paste]]
