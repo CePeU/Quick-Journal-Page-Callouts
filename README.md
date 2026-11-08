@@ -1,4 +1,4 @@
-![Total Module Downloads (All Versions)](https://img.shields.io/github/downloads/CePeU/Quick-Journal-Page-Callouts/quick-journal-page-callouts.zipp?label=Total%20Module%20Downloads&color=blue&displayAssetName=false)
+![Total Module Downloads (All Versions)](https://img.shields.io/github/downloads/CePeU/Quick-Journal-Page-Callouts/quick-journal-page-callouts.zip?label=Total%20Module%20Downloads&color=blue&displayAssetName=false)
 
 ![Latest Module Downloads](https://img.shields.io/github/downloads/CePeU/Quick-Journal-Page-Callouts/latest/quick-journal-page-callouts.zip?displayAssetName=false&label=Latest%20Module%20Version%20Downloads&color=green)
 
