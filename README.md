@@ -1,5 +1,6 @@
-![GitHub Downloads (specific asset, latest release)](https://img.shields.io/github/downloads/CePeU/Quick-Journal-Page-Callouts/latest/quick-journal-page-callouts.zip)
-![GitHub Downloads (specific asset, latest release)](https://img.shields.io/github/downloads/CePeU/Quick-Journal-Page-Callouts/1.0.6/quick-journal-page-callouts.zip)
+![Total Module Downloads (All Versions)](https://img.shields.io/github/downloads/CePeU/Quick-Journal-Page-Callouts/quick-journal-page-callouts.zipp?label=Total%20Module%20Downloads&color=blue&displayAssetName=false)
+
+![Latest Module Downloads](https://img.shields.io/github/downloads/CePeU/Quick-Journal-Page-Callouts/latest/quick-journal-page-callouts.zip?displayAssetName=false&label=Latest%20Module%20Version%20Downloads&color=green)
 
 # Quick Journal Page Callouts
 
